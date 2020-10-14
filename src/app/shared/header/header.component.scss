@@ -1,0 +1,24 @@
+@import 'mixins.scss';
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.navbar-brand{
+  padding: 1.5em;
+}
+
+
+.logo-brand{
+  width: 200px;
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    width: 40vw;
+  }
+  @include portrait-phones{
+    width: 50vw;
+  }
+}

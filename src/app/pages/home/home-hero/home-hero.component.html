@@ -1,0 +1,13 @@
+<ngb-carousel class="hero-carousel" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let post of carouselInfo" class="carousel-slide">
+      <div class="picsum-img-wrapper" >
+        <div class="pickgradient">
+            <img [src]="post.featuredImage" alt="Random slide">
+        </div>
+      </div>
+      <div class="carousel-caption" >
+        <h3 innerHtml="{{post.title}}" ></h3>
+        <div class="t-button" [routerLink]="['/servicio/1']" routerLinkActive="router-link-active" ></div>
+      </div>
+    </ng-template>
+  </ngb-carousel>

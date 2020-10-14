@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.gallery{
+
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-rows: repeat(1fr,8);
+  grid-gap:1.5em;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100%;
+
+
+  .gallery-item{
+    position: relative;
+
+  }
+
+
+
+}

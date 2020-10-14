@@ -1,0 +1,14 @@
+<nav class="navbar" [ngClass]="{'navbar-light': addBackground, 'navbar-dark': !addBackground}" [ngStyle]="{'background-color': addBackground ? 'white': 'transparent'}">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="'/'">
+            <img *ngIf="!addBackground" class="logo-brand" src="/assets/images/logo-white.png" alt="TYPOSTUDIO">
+            <img *ngIf="addBackground" class="logo-brand" src="/assets/images/logo-black.png" alt="TYPOSTUDIO">
+        </a>
+
+        <div class="d-flex ml-auto">
+            <button class="navbar-toggler" type="button"  (click)="isMenuCollapsed = !isMenuCollapsed"><span class="navbar-toggler-icon"></span></button>
+        </div>
+    </div>
+</nav>
+
+

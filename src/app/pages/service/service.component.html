@@ -1,0 +1,38 @@
+<section id="svc-hero-section">
+    <figure [ngStyle]="{'background-image': 'url(' + heroImg + ')'}">
+    </figure> 
+</section>
+
+
+<section id="svc-description-section" class="mb-5">
+    <div class="container">
+        <p class="mb-5"><b>SERVICIOS</b> 
+         <span *ngFor="let service of services">
+             <a [routerLink]="['/servicio',service.slug]" routerLinkActive="router-link-active" >// {{service.name}} </a>
+         </span>
+        </p>
+        
+        <h1 class="mt-5">// {{serviceName}}</h1>
+
+        <div class="row align-items-end">
+            <div class="col-9" innerHtml="{{serviceDescription}}">
+
+            </div>
+            <div class="col-3">
+
+                <ul>
+                    <li> <b> {{serviceName}}</b></li>
+                   <li *ngFor="let key of serviceKeywords">
+                       {{key}}
+                   </li> 
+                </ul>
+            </div>
+        </div>
+        <h5 class="mt-5">// TRABAJOS RELACIONADOS</h5>
+    </div>
+
+</section>
+
+<section id="svc-works-section">
+    <app-home-portfolio></app-home-portfolio>
+</section>

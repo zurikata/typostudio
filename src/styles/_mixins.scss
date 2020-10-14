@@ -1,0 +1,28 @@
+$desktop:1199.98px;
+$tablets:1024.98px;
+$landscape-phones:823.98px;
+$portrait-phones:666.98px;
+
+@mixin desktop {
+  @media (max-width:#{$desktop}){
+    @content;
+  }
+};
+
+@mixin tablets {
+  @media (max-width:#{$tablets})and (orientation : portrait){
+    @content;
+  }
+};
+
+@mixin landscape-phones {
+  @media (max-width:#{$landscape-phones}) and (orientation : landscape){
+    @content;
+  }
+};
+
+@mixin portrait-phones {
+  @media (max-width:#{$portrait-phones}) and (orientation : portrait){
+    @content;
+  }
+};
