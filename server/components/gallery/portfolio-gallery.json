@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_gallery_portfolio_galleries",
+  "info": {
+    "name": "service_gallery",
+    "icon": "angle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "gridColumn": {
+      "type": "string",
+      "required": true
+    },
+    "gridRow": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import 'mixins.scss';
+
+:host {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    font-size: 0.8em;
+  }
+  @include portrait-phones{
+    font-size: 0.7em;
+  }
+
+
+  a{
+    text-emphasis: none;
+    text-decoration: none;
+    color: black;
+  }
+  ul{
+    list-style-type:none;
+
+    li{
+      font-size: 10px;
+    }
+  }
+}
+
+#proj-hero-section{
+  flex:1 1 auto;
+  max-height: 100vh;
+
+    figure{
+      height: 100vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+}
+

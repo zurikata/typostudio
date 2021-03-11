@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 col-12 px-3 py-md-5 py-3" *ngFor="let service of services">
+            <div class="service-img" [routerLink]="['/servicio',service.id]" fragment="svc-hero-section" routerLinkActive="router-link-active" >
+                <img [src]="imgUrl + service.featured_image.url" width="100%">
+                <div class="plus-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80.996 80.996">
+                        <g id="plus-icon" transform="translate(-8113.448 -4549.153)" opacity="0.6">
+                          <circle id="Elipse_16" data-name="Elipse 16" cx="33.547" cy="33.547" r="33.547" transform="matrix(0.987, -0.16, 0.16, 0.987, 8115.458, 4561.911)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3.505"/>
+                          <g id="Grupo_89" data-name="Grupo 89">
+                            <path id="Trazado_126" data-name="Trazado 126" d="M8156.256,4587.34v-14.056h-4.621v11.892h0v9.912h0v10.93h4.621v-14.057h0v-4.621Z" fill="#fff"/>
+                            <rect id="Rectángulo_90" data-name="Rectángulo 90" width="11.878" height="4.621" transform="translate(8137.579 4587.34)" fill="#fff"/>
+                            <rect id="Rectángulo_91" data-name="Rectángulo 91" width="11.876" height="4.621" transform="translate(8158.437 4587.34)" fill="#fff"/>
+                          </g>
+                        </g>
+                      </svg>
+                </div>
+            </div>
+            <h3 class="pt-md-5 pt-3">{{service.title}}</h3>
+            <h3>{{service.name | uppercase }} </h3>
+            <p>{{service.description}}</p>
+        </div>
+    </div>
+</div>

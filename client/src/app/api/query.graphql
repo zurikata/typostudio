@@ -1,0 +1,124 @@
+query featuredServices {
+  services{
+    id
+    name
+    slug
+    title
+    featured_image{
+      url
+    }
+    short_description
+  }
+}
+
+query ProjectsInfo {
+	projects{
+    id
+    title
+    slug
+    client
+    year
+    home_image{
+      image{
+        url
+      }
+      gridRow
+      gridColumn
+    }
+  }
+}
+
+query service($id: ID!) {
+  service(id: $id) {
+    name
+    title
+    description
+    hero_image {
+      url
+    }
+    tag {
+      tag
+    }
+    related_works{
+      client
+      link
+      title
+      year
+      gallery{
+        gridRow
+        gridColumn
+        image{
+          url
+        }
+      }
+    }
+  }
+}
+
+query project ($id: ID!){
+  project (id:$id){
+    hero_image{
+      url
+    }
+    client
+    title
+    description
+    services{
+      name
+    }
+    tag{
+      tag
+    }
+		images{
+      section
+      gallery{
+				gridRow
+        gridColumn
+        image{
+          url
+        }
+      }
+    }
+    
+  }
+}
+
+query cliente {
+  cliente{
+    title
+    description
+    hero_image{
+      url
+    }
+  }
+}
+
+query equipo {
+  equipo{
+    title
+    description
+    hero_image{
+      url
+    }
+  }
+}
+
+query redColaboracion {
+  redColaboracion{
+    title
+    description
+    hero_image{
+      url
+    }
+  }
+}
+
+mutation createContacto($input: createContactoInput) {
+  createContacto(input: $input) {
+    contacto {
+      name
+      email
+      message
+    }
+  }
+}

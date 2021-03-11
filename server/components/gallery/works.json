@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_gallery_works",
+  "info": {
+    "name": "related_works",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "gallery": {
+      "type": "component",
+      "repeatable": false,
+      "component": "gallery.portfolio-gallery"
+    },
+    "client": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

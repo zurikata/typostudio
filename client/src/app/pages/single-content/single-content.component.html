@@ -1,0 +1,13 @@
+<section id="page-hero-section">
+    <figure [ngStyle]="{'background-image': 'url(' + imgURL  + data.hero_image?.url + ')'}">
+    </figure> 
+</section>
+
+<div class="container">
+    
+    <h1 class="mt-5">// {{data.title | uppercase }}</h1>
+
+    <markdown [data]="data.description" class="markdown" ></markdown>
+
+    
+</div>

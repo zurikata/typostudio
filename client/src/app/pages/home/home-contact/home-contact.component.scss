@@ -1,0 +1,32 @@
+@import 'mixins.scss';
+:host{
+
+    @include tablets{
+
+    }
+    @include landscape-phones{
+      font-size: 0.8em;
+    }
+    @include portrait-phones{
+      font-size: 0.7em;
+    }
+  
+    h3{
+        font-weight: 300;
+
+    }
+
+    a{
+        color:black;
+        text-decoration: none;
+
+        &:hover,&:active, &:visited{
+            color:black;
+        }
+    }
+}
+
+.btn-enviar{
+  border: none;
+  background: none;
+}

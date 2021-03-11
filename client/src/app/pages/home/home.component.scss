@@ -1,0 +1,117 @@
+@import 'mixins.scss';
+
+:host {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+#hero-section{
+  flex: 1 1 auto;
+  border: 1px solid black;
+}
+
+#legend-section{
+  text-align: center;
+  padding: 10% 30%;
+  background-color: #000000;
+  border: 1px solid black;
+  color:white;
+  line-height: 2;
+
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    padding: 10%;
+  }
+  @include portrait-phones{
+    padding: 10%;
+  }
+  h3{
+    font-family: 'Tinos', serif;
+    font-weight: normal;
+
+    @include tablets{
+
+    }
+    @include landscape-phones{
+      font-size: 1.2em;
+    }
+    @include portrait-phones{
+      font-size: 1.2em;
+    }
+  }
+}
+
+#team-section{
+  position: relative;
+  background-image: url("/assets/images/team-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vw;
+  padding: 0;
+  margin:0;
+
+  @include tablets{
+    height: 120vw;
+  }
+  @include landscape-phones{
+    height: 80vw;
+  }
+  @include portrait-phones{
+    height: 120vw;
+  }
+
+  .team-description{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    bottom: 50%;
+    left:20%;
+    right:20%;
+
+    @include tablets{
+      left:10%;
+      right:10%;
+    }
+    @include landscape-phones{
+  
+    }
+    @include portrait-phones{
+      left:5%;
+      right:5%;
+    }
+    
+    h3{
+      line-height: 2;
+      font-weight: 300;
+      @include tablets{
+        font-size: 1.2em;
+      }
+      @include landscape-phones{
+        font-size: 1.2em;
+      }
+      @include portrait-phones{
+        font-size: 1em;
+      }
+    }
+
+    .t-button{
+      width: 3em;
+      height: 3em;
+      background-image: url("/assets/images/t-button-gray.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:hover{
+        background-image: url("/assets/images/plus-button-gray.png");
+        
+      }
+    }
+  }
+}
+

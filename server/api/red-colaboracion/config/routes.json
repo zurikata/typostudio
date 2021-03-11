@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/red-colaboracion",
+      "handler": "red-colaboracion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/red-colaboracion",
+      "handler": "red-colaboracion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/red-colaboracion",
+      "handler": "red-colaboracion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

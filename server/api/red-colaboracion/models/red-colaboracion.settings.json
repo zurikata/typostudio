@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "red_colaboracions",
+  "info": {
+    "name": "Red de Colaboracion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "hero_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

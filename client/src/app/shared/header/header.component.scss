@@ -1,0 +1,56 @@
+@import 'mixins.scss';
+
+:host {
+  display: block;
+  width: 100%;
+  z-index: 20;
+
+  a{
+    text-emphasis: none;
+    text-decoration: none;
+    color: black;
+
+  }
+
+  li{
+    font-size: 21px;
+  }
+}
+
+.navbar-brand{
+  padding: 1.5em;
+}
+
+.nav-item{
+  margin-top: 1em;
+}
+
+.navbar-social{
+    flex-direction: row;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+
+    .nav-link{
+      padding-left: 0;
+      margin-left: 0;
+    }
+}
+
+.router-link-active{
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.logo-brand{
+  width: 200px;
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    width: 25vw;
+  }
+  @include portrait-phones{
+    width: 30vw;
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Servicios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "short_description": {
+      "type": "text",
+      "required": true
+    },
+    "featured_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tags.service-tag"
+    },
+    "hero_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "related_works": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.works"
+    },
+    "project": {
+      "model": "project",
+      "via": "services"
+    }
+  }
+}

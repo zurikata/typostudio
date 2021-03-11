@@ -1,0 +1,39 @@
+@import 'mixins.scss';
+
+:host {
+  display: block;
+  background-color: #F2F2F2;
+  font-weight: 300;
+
+  a{
+    color:black;
+    text-decoration: none;
+
+    &:hover,&:active, &:visited{
+        color:black;
+    }
+}
+
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    font-size: 1.2em;
+  }
+  @include portrait-phones{
+    font-size: 0.7em;
+  }
+}
+
+.logo-brand{
+  width: 200px;
+  @include tablets{
+
+  }
+  @include landscape-phones{
+    width: 30vw;
+  }
+  @include portrait-phones{
+    width: 30vw;
+  }
+}

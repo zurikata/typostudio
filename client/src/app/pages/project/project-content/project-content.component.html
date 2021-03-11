@@ -1,0 +1,28 @@
+<ng-container *ngFor="let item of imgSections">
+
+    <div class="gallery container" *ngIf="item?.section == 'gallery'">
+        <figure class="gallery-item" *ngFor="let img of item.gallery" [ngStyle]="{'grid-column': img.gridColumn }">
+            <img [src]=" imgURL + img?.image.url" alt="" width="100%" height="100%">
+        </figure>
+    </div>
+    <div *ngIf="item?.section == 'banner'">
+        <figure class="gallery-item" *ngFor="let img of item.gallery">
+            <img [src]=" imgURL + img?.image.url" alt="" width="100%" height="100%">
+        </figure>
+    </div>
+    <!-- <div *ngIf="item?.section == 'banner'">
+        <figure class="gallery-item" >
+            <img [src]="imgURL + item?.gallery?.image?.url" alt="" width="100%" height="100%">
+        </figure>
+    </div> -->
+
+</ng-container>
+
+
+
+
+
+
+
+
+

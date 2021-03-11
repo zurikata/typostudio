@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row p-md-5 p-3">
+        <div class="col-md-6 p-md-5 p-3">
+            <h3>// NOS VEMOS PRONTO</h3>
+            <p>
+                <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus quos accusamus voluptas. Sint perspiciatis quo minus reiciendis commodi, tempora facere consequuntur alias quae consequatur
+                    dolorum reprehenderit possimus dolor vitae!</strong>
+            </p>
+            <p>+593 98 425 3375 <br>
+            +593 99 9744 013 <br>   
+            <a href="mailTo:hola@typostudio-brand.com">hola@typostudio-brand.com</a></p>
+        </div>
+        <div class="col-md-6 p-md-5 p-3">
+            <form [formGroup]="contactForm" class="form-group">
+                <input type="text" placeholder="*Nombre" class="form-control" formControlName="name">
+                <input type="email" placeholder="*email" class="form-control" formControlName="email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="*Mensaje" class="form-control" formControlName="message"></textarea>
+                <label *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty 
+                || contactForm.controls['name'].touched)" class="alert alert-danger">
+                <span *ngIf="contactForm.controls['name'].errors.required">Ingrese el nombre</span>
+                </label>
+                <label *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty 
+                || contactForm.controls['email'].touched)" class="alert alert-danger">
+                <span *ngIf="contactForm.controls['email'].errors.required">Ingrese el email</span>
+                </label>
+                <label *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty 
+                || contactForm.controls['message'].touched)" class="alert alert-danger">
+                <span *ngIf="contactForm.controls['message'].errors.required">Ingrese el mensaje</span>
+                </label>
+                <label><br><strong>{{successMessage}}</strong></label>
+                <button class="btn-enviar" type="submit" [disabled] = "!contactForm.valid" (click)="sendContactInfo()">// Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>

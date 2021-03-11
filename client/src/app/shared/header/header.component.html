@@ -1,0 +1,44 @@
+<nav class="navbar" [ngClass]="{'navbar-light': addBackground, 'navbar-dark': !addBackground}" [ngStyle]="{'background-color': addBackground ? 'white': 'transparent'}">
+    <div class="container">
+
+        <a class="navbar-brand" [routerLink]="'/'" fragment="header" (click)="isMenuCollapsed = true">
+            <img *ngIf="!addBackground" class="logo-brand" src="/assets/images/logo-white.png" alt="TYPOSTUDIO">
+            <img *ngIf="addBackground" class="logo-brand" src="/assets/images/logo-black.png" alt="TYPOSTUDIO">
+        </a>
+
+        <div class="d-flex ml-auto">
+            <button class="navbar-toggler" type="button"  (click)="toggleMenu()"><span class="navbar-toggler-icon"></span></button>
+        </div>
+
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+ 
+            <ul class="navbar-nav mr-auto order-1" >
+
+                <li class="nav-item ">
+                   <span style="font-weight: 700;">SERVICIOS</span> // <a *ngFor="let service of services; let i = index" [routerLink]="['/servicio',service.id]" fragment="svc-hero-section" routerLinkActive="router-link-active" (click)="isMenuCollapsed = true"> <span *ngIf="(i)%2 != 0">// </span>{{service.name}} <br *ngIf="(i)%2 != 0"></a>
+                </li>
+
+                <li class="nav-item ">
+                    <span style="font-weight: 700;">NOSOTROS</span> //  <a *ngFor="let item of nosotros_menu; let i = index"  [routerLink]="[item.link]" [fragment]="item.fragment" routerLinkActive="router-link-active" (click)="isMenuCollapsed = true"> <span *ngIf="(i)%2 != 0"> // </span> {{item.name}}<br *ngIf="(i)%2 != 0"></a>
+                 </li>
+
+                <li class="nav-item" *ngFor="let item of menu_items">
+                <!-- Step 4: Close the menu when a link is clicked. -->
+                <a style="font-weight: 700;" [routerLink]="[item.link]" [fragment]="item.fragment" (click)="isMenuCollapsed = true">{{item.title}}</a>
+                </li>
+            </ul>
+            <ul class="navbar-social order-3 d-none d-flex ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href=""><img src="/assets/images/btn-instagram.png" alt="instagram"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""><img src="/assets/images/btn-whatsapp.png " alt="whatsapp "></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+

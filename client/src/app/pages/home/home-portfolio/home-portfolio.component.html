@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="gallery">
+    <figure class="gallery-item" *ngFor="let proj of projects" [ngStyle]="{'grid-column': proj.home_image.gridColumn, 'grid-row' : proj.home_image.gridRow }" [routerLink]="['/proyecto',proj.id]" fragment="proj-hero-section" routerLinkActive="router-link-active">
+
+      <img [src]="imgUrl + proj.home_image.image.url" alt="" width="100%" height="100%">
+      <div class="project-title">
+        <div class="plus-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 80.996 80.996">
+              <g id="plus-icon" transform="translate(-8113.448 -4549.153)" opacity="0.6">
+                <circle id="Elipse_16" data-name="Elipse 16" cx="33.547" cy="33.547" r="33.547" transform="matrix(0.987, -0.16, 0.16, 0.987, 8115.458, 4561.911)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3.505"/>
+                <g id="Grupo_89" data-name="Grupo 89">
+                  <path id="Trazado_126" data-name="Trazado 126" d="M8156.256,4587.34v-14.056h-4.621v11.892h0v9.912h0v10.93h4.621v-14.057h0v-4.621Z" fill="#fff"/>
+                  <rect id="Rectángulo_90" data-name="Rectángulo 90" width="11.878" height="4.621" transform="translate(8137.579 4587.34)" fill="#fff"/>
+                  <rect id="Rectángulo_91" data-name="Rectángulo 91" width="11.876" height="4.621" transform="translate(8158.437 4587.34)" fill="#fff"/>
+                </g>
+              </g>
+            </svg>
+      </div>
+        <h4>{{proj.title | uppercase }}</h4>
+        <h4>{{proj.client | uppercase }} // {{proj.year}}</h4>
+      
+      </div>
+    
+    </figure>
+  </div>
+</div>
