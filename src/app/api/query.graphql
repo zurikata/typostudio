@@ -1,5 +1,5 @@
 query featuredServices {
-  services{
+  services (sort: "id:asc") {
     id
     name
     slug
